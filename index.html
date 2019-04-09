@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <p>
+        <label>Độ F</label>
+        <input id="oF" type="number" placeholder="Nhập số độ F"
+                oninput="convert(this.value)"
+                onchange="convert(this.value)">
+    </p>
+    <p>Độ C: <span id="oC"></span></p>
+</form>
+
+<script>
+    function convert(oF) {
+        oF=parseFloat(oF);
+        document.getElementById("oC").innerHTML = (oF-32)/1.8;
+    }
+</script>
+
+</body>
+</html>
